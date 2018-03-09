@@ -1,4 +1,4 @@
-## Lesson 3: Service Workers
+# Lesson 3: Service Workers
 
 **Service worker** - javascript file that runs between you and your request. cannot access the DOM but it controls pages. its a script that your browser runs in the background, separate from a webpage, opening the door to features that don’t need a web page or user interaction. (ie. push notifications and background syncs)
 * Scope. Needs a trailing `/` (good ex. is github)
@@ -19,7 +19,8 @@
     1. terminated to save memory
     2. handle fetch and message events that occur when a network request or message is made from your page
 
-> #### Register a service worker: this tells the browser where you sw javascript file lives.
+## REGISTER A SERVICE WORKER
+this tells the browser where you sw javascript file lives.
 
 This code checks to see if the service worker API is available. and if it is, the sw at /sw.js is registered once the page is loaded.
 
@@ -29,5 +30,5 @@ navigator.serviceWorker.register(‘/sw.js’) // register for a service worker 
 .catch(function(){} // or failures
 ```
 
-> #### Fetch(url) - api.
+## Fetch(url) - api.
 Make network request and lets you read the response. Fetch returns a promise that resolves to a response.

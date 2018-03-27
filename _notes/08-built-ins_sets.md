@@ -85,3 +85,29 @@ console.log(months.values());
 
 The return value of `.values()` is a `SetIterator`.
 `.keys()` is an alias of `.values()`.
+
+
+#### WeakSet
+
+* can only contain objects
+* if you add something other than an object, you'll get an error
+* not iterable which means it can't be looped over
+* does not have a `.clear()` method
+
+```JavaScript
+const student1 = { name: 'James', age: 26, gender: 'male' };
+const student2 = { name: 'Julia', age: 27, gender: 'female' };
+const student3 = { name: 'Richard', age: 31, gender: 'male' };
+
+const roster = new WeakSet([student1, student2, student3]);
+console.log(roster);
+```
+> `WeakSet {Object {name: 'Julia', age: 27, gender: 'female'}, Object {name: 'Richard', age: 31, gender: 'male'}, Object {name: 'James', age: 26, gender: 'male'}}`
+
+* use this instead of `Sets` because of a process called **garbage collection**. This is freeing up memory after it is no longer needed. If you set the object to `null` you are essentially deleting that object.
+
+```javascript
+student3 = null;
+console.log(roster);
+```
+> `WeakSet {Object {name: 'Julia', age: 27, gender: 'female'}, Object {name: 'James', age: 26, gender: 'male'}}`

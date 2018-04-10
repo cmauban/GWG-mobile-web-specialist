@@ -32,3 +32,82 @@ navigator.serviceWorker.register(‘/sw.js’) // register for a service worker 
 
 ## Fetch(url) - api.
 Make network request and lets you read the response. Fetch returns a promise that resolves to a response.
+
+
+---- startings at 3.22
+### Adding UX to the Update Process
+
+`navigator.serviceWorker.controller` - service worker that controls the page.
+
+```javascript
+reg.addEventListener('updatefound', function(){
+  reg.installing.addEventListener('statechange', function(){
+    if (this.state == 'installed') {
+      // there's an update ready!
+    }
+  });
+});
+```
+
+```javascript
+IndexController.prototype._registerServiceWorker = function() {
+  if (!navigator.serviceWorker) return;
+
+  var indexController = this;
+
+  navigator.serviceWorker.register('/sw.js').then(function(reg) {
+    // TODO: if there's no controller, this page wasn't loaded
+    // via a service worker, so they're looking at the latest version.
+    // In that case, exit early
+
+    if (!navigator.serviceWorker.controller) {
+      return;
+    }
+
+    // TODO: if there's an updated worker already waiting, call
+    // indexController._updateReady()
+
+    if (reg.waiting) {
+      indexController._updateReady();
+      return;
+    }
+
+    // TODO: if there's an updated worker installing, track its
+    // progress. If it becomes "installed", call
+    // indexController._updateReady()
+
+    if(reg.installing){
+      indexController._trackInstalling(reg.installing);
+      return;
+  }
+
+    // TODO: otherwise, listen for new installing workers arriving.
+    // If one arrives, track its progress.
+    // If it becomes "installed", call
+    // indexController._updateReady()
+    reg.addEventListener('updatefound', funtion(){
+      indexController._trackInstalling(reg.installing);
+    });
+
+  });
+};
+```
+
+### TRIGGERING AN UPDATE
+
+`self.skipWaiting` - call this when the user hits the refresh button in an update notification so the service worker knows to take over straight away.
+
+```javascript
+// from a page:
+reg.installing.postMessage({foo: 'bar'});
+
+// in the service worker:
+self.addEventListener('message', function(event){
+  event.data; // {foo: 'bar'}
+});
+
+// use as a signal to reload the page:
+navigator.serviceWorker.addEventListener('controllerchange', function(){
+  // navigator.serviceWorker.controller has changed
+})
+```

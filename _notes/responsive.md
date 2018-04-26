@@ -34,3 +34,10 @@ img, embed, object, video {
     ```
  
  ## Media Queries
+ * Linked CSS: `<link rel="stylesheet" media="screen and (min-width: 550px)" href="weather-medium.css">` `<link rel="stylesheet" media="screen and (min-width: 700px)" href="weather-large.css">`
+ * Media query CSS: `@media screen and (min-width: 550px) {}`
+ 
+ ### Picking Breakpoints
+ * start with the smallest first
+ * pick your breakpoints based on the content
+ 

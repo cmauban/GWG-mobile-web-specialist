@@ -9,7 +9,7 @@
     * Device pixel ratio differs between devices.
     * The viewport wasn't set.
 
-#### Setting the viewport:
+### Setting the viewport:
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
@@ -40,4 +40,28 @@ img, embed, object, video {
  ### Picking Breakpoints
  * start with the smallest first
  * pick your breakpoints based on the content
+ * 2-3 breakpoints
  
+ ## Grids
+ * grid fluid system - column wrap. 960px grid layout or bootstrap
+ 
+ ## Flexbox
+ ```
+ .container {
+   display: flex;
+ }
+ ```
+* **important** for responsive design
+* you can use this to postion elements or the order instead of using floats or changing the HTML.
+* the default of display flex is row. they will always be in a single line within the viewport it will put elements in a row instead of a column.
+* `flex-wrap: wrap:` this will tell the browser that it is ok for the row of flex elements to wrap onto the next line.
+* the `order` CSS attribute: you can change the order of the elements:
+   * ```
+      {
+         .dark_blue {order: 4;}
+         .light_blue {order: 5;}
+         .green {order: 2;}
+         .orange {order: 3;}
+         .red {order: 1;}
+      }
+      ```

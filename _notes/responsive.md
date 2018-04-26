@@ -74,7 +74,7 @@ img, embed, object, video {
 3. **LAYOUT SHIFTER** - most responsive pattern with multiple breakpoints. `flexbox` is required to use `order`.
    * `container {width: 100%; display: flex; flex-wrap: wrap} .box {width: 100%;}
 4. **OFF CANVAS** - instead of stacking content vertically, it instead places less frequently used content (ie. navigation/menus) off screen, only showing them if the screen is large enough. ie. hamburger icons.
-   * `html, body, main {height: 100%; width: 100%;} nav {width: 300px; height: 100%; position: absolute; transform translate();} nav.open{transform: translate(0,0);}` in media screen and (min-width: 600px) to show by default:
+   * `html, body, main {height: 100%; width: 100%;} nav {width: 300px; height: 100%; position: absolute; transform translate(-300px, 0);} nav.open{transform: translate(0,0);}` in media screen and (min-width: 600px) to show by default:
    * ```
       nav {
          position: relative;

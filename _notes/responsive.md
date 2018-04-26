@@ -42,13 +42,14 @@ img, embed, object, video {
  * pick your breakpoints based on the content
  * 2-3 breakpoints
  
- ## Grids
+ ### Grids
  * grid fluid system - column wrap. 960px grid layout or bootstrap
  
- ## Flexbox
+ ### Flexbox
  ```
  .container {
    display: flex;
+   flex-wrap: wrap;
  }
  ```
 * **important** for responsive design
@@ -65,3 +66,28 @@ img, embed, object, video {
          .red {order: 1;}
       }
       ```
+## Responsive Patterns
+
+1. **COLUMN DROP** -  elements keep expanding as the viewport gets bigger and breakpoints are added. starts at 100% width at narrowest and stacks.
+   * `min-width; display: flex; flex-wrap: wrap; width: 100%;`
+2. **MOSTLY FLUID** - just like column drop but more fluid and margins are added at a larger breakpoint (ie. 800px). `margin: 0 auto; max-width: 800px;`
+3. **LAYOUT SHIFTER** - most responsive pattern with multiple breakpoints. `flexbox` is required to use `order`.
+   * `container {width: 100%; display: flex; flex-wrap: wrap} .box {width: 100%;}
+4. **OFF CANVAS** - instead of stacking content vertically, it instead places less frequently used content (ie. navigation/menus) off screen, only showing them if the screen is large enough. ie. hamburger icons.
+   * `html, body, main {height: 100%; width: 100%;} nav {width: 300px; height: 100%; position: absolute; transform translate();} nav.open{transform: translate(0,0);}` in media screen and (min-width: 600px) to show by default:
+   * ```
+      nav {
+         position: relative;
+         transform: translate(0,0);
+      }
+      
+      body {
+         display: flex;
+         flex-flow: row nowrap;
+      }
+      
+      main {
+         width: auto;
+         flex-grow: 1;
+      }
+   ```

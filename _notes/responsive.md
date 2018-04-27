@@ -90,4 +90,5 @@ img, embed, object, video {
          width: auto;
          flex-grow: 1;
       }
-   ```
+      ```
+* **CSS `background-image: url(''); background-size: cover;`** will scale up the image so the image takes up the entire div.

@@ -32,6 +32,13 @@ img, embed, object, video {
       min-height: 48px;
     }
     ```
+* wrap tables in div.
+```
+   div.contained_table {
+      width: 100%;
+      overflow-x: auto
+   }
+```
  
  ## Media Queries
  * Linked CSS: `<link rel="stylesheet" media="screen and (min-width: 550px)" href="weather-medium.css">` `<link rel="stylesheet" media="screen and (min-width: 700px)" href="weather-large.css">`
@@ -92,3 +99,45 @@ img, embed, object, video {
       }
       ```
 * **CSS `background-image: url(''); background-size: cover;`** will scale up the image so the image takes up the entire div.
+
+## OPITMIZATION
+
+### Images
+
+### Tables
+ * HIDDEN COLUMNS - hide columns based on their importance as the viewports get smaller.
+ *
+ *
+
+
+**No More Tables.** turn tables into column/row in a smaller viewport to display all data.
+ ```
+ 
+ @media screen and (max-width: 500px) {
+    table, thead, tbody, th, td tr {
+      display: block;
+    }
+    
+    thead tr { // hide table header. don't use display:none because of screen readers
+      position: aboslute;
+      top: -9999px;
+      left: -9999px;
+   }
+   
+   td { // make room for header
+      position: relative;
+      padding-left: 50%
+   }
+   
+   td:before { // add row labels
+      position: absolute;
+      left: 6px;
+      content: attr(data-th); // label for each row
+      font-weight: bold;
+   }
+    
+ }
+ ```
+### FONTS
+* ~65 characters per line
+* at least 16px or 1.2em

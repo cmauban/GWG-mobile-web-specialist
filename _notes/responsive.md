@@ -141,3 +141,9 @@ img, embed, object, video {
 ### FONTS
 * ~65 characters per line
 * at least 16px or 1.2em
+
+## IMAGES
+
+* Total bits = pixels x bits per pixel
+* keep images as small as possible, and compression as high as possible.
+  * less pixels x better compress = less bytes

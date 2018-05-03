@@ -142,7 +142,7 @@ img, embed, object, video {
 * ~65 characters per line
 * at least 16px or 1.2em
 
-## IMAGES
+## IMAGES x UNITS
 
 * Total bits = pixels x bits per pixel
 * keep images as small as possible, and compression as high as possible.
@@ -151,3 +151,15 @@ img, embed, object, video {
 * use `relative` + `aboslute` sizing for images side by side by using: `width: calc((100% - 10px)/2); margin-right: 10px;` for the images to span 100% across screen.
    * `calc()` you take the 100% viewport - the total px of margin space, divided by the number of images.
 * also use `img:last-of-type { margin-right:0; }` to make sure the last image doesn't have margin.
+* use `height: 100vh` and `width: 100vw` instead of percents.
+* `height: 100minvh; weight: 100minvw`
+
+### File Formats
+* order of the kind of images you should use:
+   1. vector .SVG (logos, small size, sharp images)
+   2. vector .PNG (use to preserve fine detail with highest resolution. great for logos and text images. use .png over gif bc of licensing issues)
+      * PNG-8: not many colors need to be used
+      * PNG-24: many colors need to be used
+   3. GIFS (use for images with simple illustrations and blocks of color like logos and icons. not photographs.)
+   4. raster .JPEG (for photos or screenshots)
+   * browser can reformat vector images at different sizes.

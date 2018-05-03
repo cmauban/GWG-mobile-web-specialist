@@ -147,3 +147,7 @@ img, embed, object, video {
 * Total bits = pixels x bits per pixel
 * keep images as small as possible, and compression as high as possible.
   * less pixels x better compress = less bytes
+* set `max-width` of all images to `100%` so its only as wide as its natural width.
+* use `relative` + `aboslute` sizing for images side by side by using: `width: calc((100% - 10px)/2); margin-right: 10px;` for the images to span 100% across screen.
+   * `calc()` you take the 100% viewport - the total px of margin space, divided by the number of images.
+* also use `img:last-of-type { margin-right:0; }` to make sure the last image doesn't have margin.

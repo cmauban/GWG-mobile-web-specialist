@@ -153,6 +153,7 @@ img, embed, object, video {
 * also use `img:last-of-type { margin-right:0; }` to make sure the last image doesn't have margin.
 * use `height: 100vh` and `width: 100vw` instead of percents.
 * `height: 100minvh; weight: 100minvw`
+* COMPRESS YOUR IMAGES
 
 ### File Formats
 * order of the kind of images you should use:

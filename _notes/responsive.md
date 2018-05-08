@@ -154,6 +154,13 @@ img, embed, object, video {
 * use `height: 100vh` and `width: 100vw` instead of percents.
 * `height: 100minvh; weight: 100minvw`
 * COMPRESS YOUR IMAGES
+* Use `<figure>` to contain images
+   ```
+  <figure>
+      <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">	
+     <figcaption>MDN Logo</figcaption>
+  </figure>
+   ```
 
 ### File Formats
 * order of the kind of images you should use:

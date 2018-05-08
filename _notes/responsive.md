@@ -141,6 +141,7 @@ img, embed, object, video {
 ### FONTS
 * ~65 characters per line
 * at least 16px or 1.2em
+* `em` refers to the font size. ie: 50em (element) x 16px (font-size) = 800px (width)
 
 ## IMAGES x UNITS
 

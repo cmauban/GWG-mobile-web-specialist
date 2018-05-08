@@ -154,12 +154,25 @@ img, embed, object, video {
 * use `height: 100vh` and `width: 100vw` instead of percents.
 * `height: 100minvh; weight: 100minvw`
 * COMPRESS YOUR IMAGES
-* Use `<figure>` to contain images
+* Use `<figure>` to contain images, illustrations, diagrams, code snippets, etc. that is a reference in the main flow of a document but can be moved to another part of the document without affecting the main flow.
    ```
   <figure>
       <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">	
      <figcaption>MDN Logo</figcaption>
   </figure>
+  
+  // or
+  
+    <figure>
+      <p>
+        Depression is running through my head,<br>
+        These thoughts make me think of death,<br>
+        A darkness which blanks my mind,<br>
+        A walk through the graveyard, what can I find?....
+      </p>
+      <figcaption><cite>Depression</cite>.
+      By: Darren Harris</figcaption>
+   </figure>
    ```
 
 ### File Formats

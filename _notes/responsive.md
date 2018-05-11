@@ -176,6 +176,19 @@ img, embed, object, video {
    </figure>
    ```
 
+### `srcset` and `size` attribute
+* allows us to provide a set of images that can be potentially served by the browser.
+```
+<img
+    src="example.jpg",
+    srcset="example.jpg 2000w,
+            example-thumb.jpg 400w, // ie. smart watch
+            example-medium.jpg 1000w,
+            example@2x.jpg 4000w" // ie. 27" iMac
+    sizes="100vw">
+```
+* if you specify `srcset` but not `sizes`, it will default it to `100vw`.
+
 ### File Formats
 * order of the kind of images you should use:
    1. vector .SVG (logos, small size, sharp images)

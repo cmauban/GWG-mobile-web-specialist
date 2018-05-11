@@ -179,15 +179,14 @@ img, embed, object, video {
 ### `srcset` and `size` attribute
 * allows us to provide a set of images that can be potentially served by the browser.
 ```
-<img
-    src="example.jpg",
-    srcset="example.jpg 2000w,
-            example-thumb.jpg 400w, // ie. smart watch
-            example-medium.jpg 1000w,
-            example@2x.jpg 4000w" // ie. 27" iMac
-    sizes="100vw">
+<img src="hero-big.jpg" // fallback option
+srcset="hero-small.jpg 450w, hero-medium.jpg 960w, hero-big.jpg 1500w" // img source and define actual width of the img
+sizes="(max-width: 552px) 450px, (max-width: 1062px) 960px, 1500px" // which vp widths we want a particular image to be downloaded ie. download img with width of 450px on devices with vp width up to 552px. dont need to declare width for biggest img. just need to declare the size for above 1062px.
+alt="Learnedia Hero" />
 ```
 * if you specify `srcset` but not `sizes`, it will default it to `100vw`.
+* in `srcset` ie. `hero-small.jpg 450w`, define the actual width of the img using the integer representing the width in pixels with w appended. this lets the browser know the actual size of the image before downloading it.
+
 
 ### File Formats
 * order of the kind of images you should use:

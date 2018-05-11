@@ -154,7 +154,7 @@ img, embed, object, video {
 * also use `img:last-of-type { margin-right:0; }` to make sure the last image doesn't have margin.
 * use `height: 100vh` and `width: 100vw` instead of percents.
 * `height: 100minvh; weight: 100minvw`
-* COMPRESS YOUR IMAGES
+* RESIZE & COMPRESS YOUR IMAGES
 * Use `<figure>` to contain images, illustrations, diagrams, code snippets, etc. that is a reference in the main flow of a document but can be moved to another part of the document without affecting the main flow.
    ```
   <figure>

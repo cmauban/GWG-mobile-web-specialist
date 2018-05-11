@@ -155,6 +155,7 @@ img, embed, object, video {
 * use `height: 100vh` and `width: 100vw` instead of percents.
 * `height: 100minvh; weight: 100minvw`
 * RESIZE & COMPRESS YOUR IMAGES
+   * [Grunt-responsive-images][https://github.com/andismith/grunt-responsive-images]
 * Use `<figure>` to contain images, illustrations, diagrams, code snippets, etc. that is a reference in the main flow of a document but can be moved to another part of the document without affecting the main flow.
    ```
   <figure>

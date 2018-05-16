@@ -198,3 +198,12 @@ alt="Learnedia Hero" />
    3. GIFS (use for images with simple illustrations and blocks of color like logos and icons. not photographs.)
    4. raster .JPEG (for photos or screenshots)
    * browser can reformat vector images at different sizes.
+
+### Image scenarios:
+* star icon to be reused and scaled on mobile devices
+   * **vector** over raster
+   * inline the images with .svg (not too many bytes) _or_
+   * set `src` to external reused imgs (cache and not reload)
+* self-publishing, mobile photo journal site w/ single use photos
+   * **.jpg (raster)** over vector
+   * inline the images (reduces requests for mobile)

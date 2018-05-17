@@ -190,14 +190,18 @@ alt="Learnedia Hero" />
 
 
 ### File Formats
-* order of the kind of images you should use:
-   1. vector .SVG (logos, small size, sharp images)
+* Kind of images you should use:
+   1. vector .SVG (logos, small size, sharp images, can scale better than .gif)
    2. vector .PNG (use to preserve fine detail with highest resolution. great for logos and text images. use .png over gif bc of licensing issues)
       * PNG-8: not many colors need to be used
       * PNG-24: many colors need to be used
-   3. GIFS (use for images with simple illustrations and blocks of color like logos and icons. not photographs.)
+   3. GIFS (raster. use for images with simple illustrations and blocks of color like logos and icons. not photographs.)
    4. raster .JPEG (for photos or screenshots)
    * browser can reformat vector images at different sizes.
+* Inline or External file?
+   * external file - use if images are going to be reused so browser can cache it
+   * inline - reduces number of requests and only used once.
+   
 
 ### Image scenarios:
 * star icon to be reused and scaled on mobile devices
@@ -207,3 +211,9 @@ alt="Learnedia Hero" />
 * self-publishing, mobile photo journal site w/ single use photos
    * **.jpg (raster)** over vector
    * inline the images (reduces requests for mobile)
+* corportate website that reuses its logo in small and large formats
+   * vector graphic for scaling
+   * external file so it can be used on multiple pages so browser can cache it
+* video-heavy mobile web app wants a spinning record icon for loading videos
+   * used an **animated .SVG** over an animated .gif
+   * external file since it will be reused.

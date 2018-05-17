@@ -196,6 +196,10 @@ alt="Learnedia Hero" />
 * if you specify `srcset` but not `sizes`, it will default it to `100vw`.
 * in `srcset` ie. `hero-small.jpg 450w`, define the actual width of the img using the integer representing the width in pixels with w appended. this lets the browser know the actual size of the image before downloading it.
 
+DEVICE PIXEL RATIO VS. IMAGE WIDTH
+DPR: `<img src="image_2x.jpg" srcset="image_2x.jpg 2x, image_1x.jpg 1x" alt="a cool image">`
+* `1x` represents 1x displays and `2x` represents dislays with twice the pixel density, like Apple's Retina displays.
+Image Width: `<img src="image_200.jpg" srcset="image_200.jpg 200w, image_100.jpg 100w" alt="a cool image">`
 
 ### File Formats
 * Kind of images you should use:

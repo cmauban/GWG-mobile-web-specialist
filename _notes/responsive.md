@@ -145,6 +145,14 @@ img, embed, object, video {
 
 ## IMAGES x UNITS
 
+### Standards
+```
+<meta charset="utf-8"> // so you can use unicodes instead of images
+```
+```
+<i title="facebook" class="fas fa-facebook"></i> // add title to all semantic icons to give meaning
+```
+
 * Total bits = pixels x bits per pixel
 * keep images as small as possible, and compression as high as possible.
   * less pixels x better compress = less bytes

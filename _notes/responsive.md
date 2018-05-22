@@ -1,4 +1,4 @@
-# Accessible & Responsive Web Apps
+# Responsive Web Apps
 
 ## Viewports
 

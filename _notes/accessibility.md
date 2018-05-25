@@ -3,8 +3,8 @@
 * [Web Content Accessibility Guidelines 2.0 (WCAG)](https://www.w3.org/TR/WCAG20/)
 * [Web Aim Checklist for WCAG 2.0](https://webaim.org/standards/wcag/checklist)
 * Chrome Accessibility Dev Tool Extention lets you quickly find accessibility issues in your page
- * adds an `Accessibility Properties` panel to your Elements inspector
- * add an `Accessibility` option to the audits panel
+  * adds an `Accessibility Properties` panel to your Elements inspector
+  * add an `Accessibility` option to the audits panel
 
 ## Focus
 

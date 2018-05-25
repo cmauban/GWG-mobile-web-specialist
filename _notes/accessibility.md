@@ -56,3 +56,7 @@
 }
 ```
 
+### [Keyboard Design Patterns - Roving Focus/tabindex](https://www.w3.org/TR/wai-aria-practices/#radiobutton)
+
+* [example]()https://github.com/udacity/ud891/tree/gh-pages/lesson2-focus/05-radio-group/solution
+* to find missing focus, type in `document.activeElement` in the console

@@ -78,6 +78,7 @@
 ## Semantics
 
 ### `<label>`
+* all form fields need a label. If a form control does not have a properly associated text label, the function or purpose of that form control may not be presented to screen reader users. Form labels also provide visible descriptions and larger clickable targets for form controls.
 
 ```html
 <input type="checkbox" id="letter" checked name="jLetter">
@@ -96,3 +97,18 @@ OR
 
 * all images should have `alt` text.
 * decorative and descriptive thumbnail images with links should have empty `alt` text to avoid repeition.
+* without alternative text, the content of an image will not be available to screen reader users or when the image is unavailable.
+
+### Using Headings for Screen readers
+* HEADING HIERARCHY - use headings in a meaningful order down the page, not for styling.
+
+```html
+<h2 class="offscreen">Top Story</h2>
+```
+```css
+.offscreen {
+  position: absolute;
+  left: -10000px;
+  top: -10000px;
+}
+```

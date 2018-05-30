@@ -63,3 +63,20 @@
 
 * [example]()https://github.com/udacity/ud891/tree/gh-pages/lesson2-focus/05-radio-group/solution
 * to find missing focus, type in `document.activeElement` in the console
+
+## Semantics
+
+### `<label>`
+
+```html
+<input type="checkbox" id="letter" checked name="jLetter">
+<label for="letter">Reciever offers?</label>
+
+OR
+
+<label>
+ <input type="checkbox" checked name="jLetter">
+ Reciever offers?
+</label>
+
+```

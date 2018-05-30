@@ -6,6 +6,17 @@
   * adds an `Accessibility Properties` panel to your Elements inspector
   * add an `Accessibility` option to the audits panel
 
+### VoiceOver shortcuts
+
+* `CMD+F5` to turn on VoiceOver on OS X
+* Normal keyboard operation (`TAB, Shift+TAB`, arrow keys etc.) work as normal with VoiceOver running
+* `CMD+L` to jump to address bar
+* `CTRL+Option+U` to open Web Rotor
+* Type search term with Web Rotor open to search within Web Rotor
+* `CTRL` + `Option` + `← ↑ ↓ →` to explore content
+* `CTRL` + `Option` + `CMD` + `H` to move forward by heading
+* `CTRL` + `Option` + `CMD` + `Shift` + `H` to move backward by heading
+
 ## Focus
 
 * focus - determines were keyboard elements go on the page
@@ -80,3 +91,8 @@ OR
 </label>
 
 ```
+
+### `alt` text
+
+* all images should have `alt` text.
+* decorative and descriptive thumbnail images with links should have empty `alt` text to avoid repeition.

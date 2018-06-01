@@ -1,10 +1,21 @@
 # Accessibility
 
+* [Udacity Accessibility Example code](https://github.com/udacity/ud891)
 * [Web Content Accessibility Guidelines 2.0 (WCAG)](https://www.w3.org/TR/WCAG20/)
 * [Web Aim Checklist for WCAG 2.0](https://webaim.org/standards/wcag/checklist)
 * Chrome Accessibility Dev Tool Extention lets you quickly find accessibility issues in your page
   * adds an `Accessibility Properties` panel to your Elements inspector
   * add an `Accessibility` option to the audits panel
+* Web apps can be more accessible using:
+  * **DOM ORDER**
+  * LOGICAL **FOCUS** STRATEGY
+  * RICH **KEYBOARD** EXPERIENCE
+  * **SEMANTICS**
+  * **LABELING** CONTROLS AND IMAGES
+  * PAGE STRUCTURE USING **HEADINGS**
+  * PROVIDE **LANDMARK** INFORMATION FOR ASSISTIVE TECHNOLOGY
+  * **LINKS**
+  
 
 ### VoiceOver shortcuts
 
@@ -39,6 +50,7 @@
 * `tabindex="0"` means that the element should be focusable in sequential keyboard navigation, but its order is defined by the document's source order.
 * don't used `tabindex` greater than 1.
 * [managing focus with `tabindex` and JavaScript example](https://github.com/udacity/ud891/tree/gh-pages/lesson2-focus/03-managing-focus/solution)
+* **the ARIA `role` attribute should ALWAYS be on the same element as the `tabindex` attribute**
 
 ### [Skip Links](https://webaim.org/techniques/skipnav/)
 
@@ -74,6 +86,10 @@
 
 * [example]()https://github.com/udacity/ud891/tree/gh-pages/lesson2-focus/05-radio-group/solution
 * to find missing focus, type in `document.activeElement` in the console
+
+## Navigating Content
+* use meaningful headings and good page structure
+  * `<header>` `<nav>` `<main>` `<section>` `<article>` `<aside>` `<footer>`
 
 ## Semantics
 
@@ -112,3 +128,31 @@ OR
   top: -10000px;
 }
 ```
+## ARIA or "WAI-ARIA"
+
+* we use ARIA to enable us to use non-native elements so screen readers can still understand what it is. Ie. Fake/custom checkbox instead of the native `<input type="checkbox">`
+* it can also modify exisiting semantics. ie. from a button to switch toggle.
+* this will allow screen readers to know the name AND the **state.** (JS needed)
+* use `role=""` and `aria-checked="true"` (or false)
+* **the `role` attribute should ALWAYS be on the same element as the `tabindex` attribute**
+
+```html
+<!-- custom checkbox -->
+<div role="checkbox" aria-checked="true">
+ Receive offers
+</div>
+```
+* it can add extra labels and description text. ie. button images
+
+```html
+<button class="glyph" aria-label="Filter">
+ <div class="menu-glyph">
+ </div>
+</button>
+```
+
+### [`role="X"`s](https://www.w3.org/TR/wai-aria-1.0/roles#role_definitions)
+ * accordions: `tree`, `treeitem`, `group` - `aria-expanded`
+ * checkbox: `checkbox` - `aria-checked`
+ * toggle: `switch`
+ * live updates: `alert`

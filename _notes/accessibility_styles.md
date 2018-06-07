@@ -83,3 +83,8 @@ INSTEAD OF..
 }
 
 ```
+
+## Color Contrast
+
+* minimum contrasts ratio of body text and images is at least 4.5:1
+* larget text (over 18 pt or 14 pt bold) has to have at least 3:1

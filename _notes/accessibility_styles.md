@@ -51,3 +51,35 @@ radio:focus::before {
 }
 
 ```
+
+### use Aria CSS instead of a CSS selector
+```css
+.disclosure-button[aria-expanded="false"] .icon::after{
+  content: '▶';
+}
+
+.disclosure-button[aria-expanded="true"] .icon::after{
+   content: '▼';
+}
+
+INSTEAD OF..
+
+.disclosure-button .icon::after {
+  content: '▶';
+}
+
+.disclosure-button.expanded .icon::after {
+  content: '▼';
+}
+
+.disclosure-content[aria-hidden="true"] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.disclosure-content[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+```

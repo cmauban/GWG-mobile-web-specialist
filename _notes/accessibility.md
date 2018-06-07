@@ -135,6 +135,7 @@ OR
 * this will allow screen readers to know the name AND the **state.** (JS needed)
 * use `role=""` and `aria-checked="true"` (or false)
 * **the `role` attribute should ALWAYS be on the same element as the `tabindex` attribute**
+* aria is the only way we can use labels for description text.
 
 ```html
 <!-- custom checkbox -->
@@ -156,3 +157,7 @@ OR
  * checkbox: `checkbox` - `aria-checked`
  * toggle: `switch`
  * live updates: `alert`
+ 
+ #### labels
+ * `aria-label` - use on close or hamburger menus. ie: `<button aria-label="close">X</button>` button name = "close"
+ * `aria-labelledby` - use to specify and conntect name to option labels. ie: `span id="rg-label">Drink Options</span><div role="radiogroup" aria-labelledby="rg-label">...</div>` radio group name: "Drink options". this will always take precedent.

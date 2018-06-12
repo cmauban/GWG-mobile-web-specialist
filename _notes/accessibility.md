@@ -109,10 +109,11 @@ OR
 
 ```
 
-### `alt` text
+### Images: `alt` text
 
 * all images should have `alt` text.
 * decorative and descriptive thumbnail images with links should have empty `alt` text to avoid repeition.
+* If using the HTML `<img>` element for DECORATIVE images, add the following attribute: `role="presentation"`
 * without alternative text, the content of an image will not be available to screen reader users or when the image is unavailable.
 
 ### Using Headings for Screen readers

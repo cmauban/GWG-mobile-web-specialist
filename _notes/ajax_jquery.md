@@ -24,11 +24,14 @@ $.ajax(<just a configuration object>);
        isRound: true
     };
     ```
-An Ajax w/ jQuery request vs. w/ XHR :
+### An Ajax w/ jQuery request vs. w/ XHR :
 ```javascript
 // THIS:
 $.ajax({
     url: `https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`
+    headers: {
+      Authorization: 'Client-ID <your-client-id-here>'
+    }
 }).done(addImage);
 
 
